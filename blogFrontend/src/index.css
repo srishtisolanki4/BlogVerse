@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+html{
+      background-color: #e4e9fd;
+    background-image: -webkit-linear-gradient(65deg, #d1c5e6 100%);
+    min-height:730px;
+
+}
