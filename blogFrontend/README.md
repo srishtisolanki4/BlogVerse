@@ -1,4 +1,4 @@
-# 💻 blogVerse — Frontend
+# 💻 BlogVerse — Frontend
 
 The frontend of blogVerse built using **React.js** and **Tailwind CSS**.  
 Allows users to browse, create, edit, and manage their blogs seamlessly.
