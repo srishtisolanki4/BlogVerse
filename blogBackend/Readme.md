@@ -1,4 +1,4 @@
-# 🧩 BlogSphere — Backend
+# 🧩 BlogVerse — Backend
 
 The backend of BlogSphere built using **Express.js** and **MongoDB**.  
 Handles authentication, blog management, and secure CRUD APIs.
