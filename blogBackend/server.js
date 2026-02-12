@@ -14,7 +14,7 @@ app.use(cors({
 
 
 app.use(express.urlencoded({extended:true}));
-const port=3000;
+const port=process.env.PORT || 3000;
 const{register , login}= require('./controllers/authcontroller');
 const {home,readBlog,createBlog,editBlog,deleteBlog} = require("./controllers/blogcontroller");
 const{verify, verifyUser}= require("./middleware/verifyOwnership");
