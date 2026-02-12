@@ -14,7 +14,8 @@ function Home(){
         const fetchData = async () => {
         try{
            const response = await axios.get( `${import.meta.env.VITE_API_URL}/home`);
-           setBlogs(response.data.blogs);
+           setBlogs(Array.isArray(response.data.blogs) ? response.data.blogs : []);
+
             console.log("data received successfully")
         }catch(err){
             console.log("error displaying data" + err);
@@ -30,7 +31,7 @@ function Home(){
             <Navbar/>
             <Header/>
             <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {blogs.map((blog)=>(
+            {Array.isArray(blogs) && blogs.map((blog)=>(
                 <BlogCard key={blog._id} blog={blog} />
             ))}
             </div>
