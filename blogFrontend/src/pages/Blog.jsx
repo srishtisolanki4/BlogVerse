@@ -19,7 +19,7 @@ async function handleAddBlog(event) {
     };
 
     try {
-        const res = await fetch('${import.meta.env.VITE_API_URL}/create', {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/create`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newBlog),
