@@ -20,7 +20,7 @@ function Signup(){
                 Swal.fire("Incorrect password");
                 return;
             }
-            const response= await axios.post("http://127.0.0.1:3000/register" , {name,email,password},{withCredentials:true});
+            const response= await axios.post(`${import.meta.env.VITE_API_URL}/register` , {name,email,password},{withCredentials:true});
             setUser(response.data.user);
             console.log(response);
             Swal.fire(response.data.message);

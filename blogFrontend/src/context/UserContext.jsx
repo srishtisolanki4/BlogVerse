@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/me', { withCredentials: true });
+        const res = await axios.get( `${import.meta.env.VITE_API_URL}/me`, { withCredentials: true });
         setUser(res.data.user);
       } catch (err) {
         setUser(null); // visitor
@@ -22,7 +22,7 @@ export const UserProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post('http://localhost:3000/logout', {}, { withCredentials: true });
+      await axios.post(`${import.meta.env.VITE_API_URL}/logout`, {}, { withCredentials: true });
       setUser(null);
       window.location.href = '/';
     } catch (err) {

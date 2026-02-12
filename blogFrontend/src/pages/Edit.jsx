@@ -54,7 +54,7 @@ function Edit(){
 
         try{
             console.log('yeah i got hit');
-            const response = await axios.patch(`http://localhost:3000/update/${id}`, newBlog, {
+            const response = await axios.patch(`${import.meta.env.VITE_API_URL}/${id}`, newBlog, {
   withCredentials: true
 });
              navigate('/');console.log("data finally updated" + response);

@@ -19,7 +19,7 @@ function Login(){
     async function handleSubmit(event){
         event.preventDefault();
         try{
-            const response= await axios.post("http://localhost:3000/login" , {email,password}, {withCredentials:true}) ;
+            const response= await axios.post(`${import.meta.env.VITE_API_URL}/login` , {email,password}, {withCredentials:true}) ;
             setUser(response.data.user);
             setEmail(" ");
             setPassword(" ");

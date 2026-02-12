@@ -13,7 +13,7 @@ function Home(){
     useEffect(()=>{
         const fetchData = async () => {
         try{
-           const response = await axios.get('http://127.0.0.1:3000/home');
+           const response = await axios.get( `${import.meta.env.VITE_API_URL}/home`);
            setBlogs(response.data);
             console.log("data received successfully")
         }catch(err){

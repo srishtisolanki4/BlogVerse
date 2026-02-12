@@ -13,7 +13,7 @@ function Read(){
         const fetchBlog= async ()=>{
             try{
                 console.log("about to hit request:");
-                const response= await axios.get(`http://127.0.0.1:3000/read/${id}`);
+                const response= await axios.get(`${import.meta.env.VITE_API_URL}/read/${id}`);
                 setRequiredBlog(response.data);
             }catch(err){
                 console.log(err);

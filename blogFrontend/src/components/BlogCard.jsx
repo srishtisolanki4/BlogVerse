@@ -32,7 +32,7 @@ function BlogCard({blog}){
         
         try{
             console.log("about to delete");
-            const response = await axios.delete(`http://localhost:3000/delete/${id}` , {withCredentials:true});
+            const response = await axios.delete(`${import.meta.env.VITE_API_URL}/${id}` , {withCredentials:true});
             console.log("Deleted successfully");
             navigate('/' ,{state: {refresh:true}});
         }catch(err){
