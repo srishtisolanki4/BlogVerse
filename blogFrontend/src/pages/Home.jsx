@@ -14,7 +14,7 @@ function Home(){
         const fetchData = async () => {
         try{
            const response = await axios.get( `${import.meta.env.VITE_API_URL}/home`);
-           setBlogs(response.data);
+           setBlogs(response.data.blogs);
             console.log("data received successfully")
         }catch(err){
             console.log("error displaying data" + err);
